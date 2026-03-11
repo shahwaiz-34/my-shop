@@ -1,16 +1,51 @@
-# React + Vite
+# 🛒 MyShop | High-Performance E-Commerce Experience
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive e-commerce platform built with a focus on clean architecture, secure authentication, and a "real-feel" shopping journey.
 
-Currently, two official plugins are available:
+## 🌟 Overview
+MyShop is a multi-page React application that simulates a real-world retail environment. From browsing dynamic products fetched via API to managing a persistent shopping cart, the app leverages modern tools like **Clerk** for security and **Tailwind CSS** for a premium, high-contrast UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Secure Auth:** Complete user lifecycle management (Sign In, Sign Up, and Profile) powered by Clerk.
+* **Dynamic Product Feed:** Real-time data fetching from the [DummyJSON API](https://dummyjson.com/) using `async/await` and robust error handling.
+* **Sophisticated Routing:** Seamless transitions between Listing, Details, and Cart pages via React Router DOM.
+* **Cart Persistence:** A custom-built cart engine synced with `localStorage`, ensuring user data survives page refreshes.
+* **Premium UI:** Featuring a sticky, backdrop-blur navigation bar and a "Dark Academia" aesthetic.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+| Category        | Technology                        |
+|-----------------|-----------------------------------|
+| **Core** | React 18 (Vite)                  |
+| **Auth** | Clerk Auth                       |
+| **Styling** | Tailwind CSS                     |
+| **State** | Context API (Global Cart/Product)|
+| **Routing** | React Router DOM                 |
+| **API** | Fetch API / DummyJSON            |
+
+---
+
+## 📂 System Architecture
+
+The application is structured into a logical 3-tier page system:
+
+1.  **Product Listing:** An interactive grid with dynamic data loading and responsive layouts.
+2.  **Product Detail:** Deep-linking functionality using unique IDs to display specific product specifications and high-res imagery.
+3.  **Shopping Cart:** A real-time management hub for quantity adjustments, dynamic price calculations, and item removal.
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+ ├── components/  # Reusable UI (Navbar, ProductCards)
+ ├── context/     # Global state management (Cart)
+ ├── pages/       # Main views (Home, Product, Cart)
+
+--- 
